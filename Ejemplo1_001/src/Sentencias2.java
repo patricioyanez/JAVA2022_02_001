@@ -12,7 +12,7 @@ public class Sentencias2 {
         System.out.print("Ingrese su preferencia:");
         voto = leer.nextInt();
         
-        if(voto < 1 || voto > 2)
+        if(voto < 1 || voto > 2) //  && => and
         {
             System.out.println("La opción no es válida");
         }
