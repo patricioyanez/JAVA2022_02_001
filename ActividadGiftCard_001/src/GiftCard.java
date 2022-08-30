@@ -62,5 +62,8 @@ public class GiftCard {
         this.fecha = fecha;
     }
     
-    
+    public long generarCodigo(long codigo)
+    {
+        return codigo = codigo +1;
+    }
 }
