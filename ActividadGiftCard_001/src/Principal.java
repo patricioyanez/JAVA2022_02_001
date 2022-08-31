@@ -10,5 +10,7 @@ public class Principal {
         GiftCard g2 = new GiftCard();
         codigoInicial = g2.generarCodigo(codigoInicial);
         System.out.println("" + codigoInicial);
+        
+        System.out.println(g2);
     }
 }
