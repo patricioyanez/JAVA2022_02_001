@@ -79,4 +79,20 @@ public class GiftCard {
         return datos;
     }
     
+    public void generarClave()
+    {
+        String clave = "" + this.trabajador.getRut();
+        clave = clave.substring(0, 4);
+        this.clave = Integer.parseInt(clave);
+    }
+    
+    public boolean validarSaldo(int montoDeVenta)
+    {
+        if(montoDeVenta<= this.monto)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
 }
