@@ -5,29 +5,29 @@ public class GiftCard {
     private int clave;
     private int monto;
     private Date fecha;
-    private Trabajador trabajo;
+    private Trabajador trabajador;
     public GiftCard() {
         this.codigo = 0;
         this.clave = 0;
         this.monto = 0;
         this.fecha = new Date(); // null;
-        this.trabajo = new Trabajador(); // null;
+        this.trabajador = new Trabajador(); // null;
     } 
         
-    public GiftCard(long codigo, int clave, int monto, Date fecha, Trabajador trabajo) {
+    public GiftCard(long codigo, int clave, int monto, Date fecha, Trabajador trabajador) {
         this.codigo = codigo;
         this.clave = clave;
         this.monto = monto;
         this.fecha = fecha;
-        this.trabajo = trabajo;
+        this.trabajador = trabajador;
     }
 
-    public Trabajador getTrabajo() {
-        return trabajo;
+    public Trabajador getTrabajador() {
+        return trabajador;
     }
 
-    public void setTrabajo(Trabajador trabajo) {
-        this.trabajo = trabajo;
+    public void setTrabajador(Trabajador trabajador) {
+        this.trabajador = trabajador;
     }
 
     public long getCodigo() {
@@ -64,6 +64,19 @@ public class GiftCard {
     
     public long generarCodigo(long codigo)
     {
-        return codigo = codigo +1;
+        return this.codigo = codigo +1;
     }
+    
+    public String datos()
+    {
+        String datos = "**** Datos de la GiftCard ****\n"+
+                        "Codigo     : " + this.codigo + "\n" +
+                        "clave      : " + this.clave + "\n" +
+                        "monto      : " + this.monto + "\n" +
+                        "fecha      : " + this.fecha + "\n" +
+                        "Nombre     : " + this.trabajador.getNombre() + "\n" +
+                        "Rut        : " + this.trabajador.getRut() + "-" + this.trabajador.getDv() + "\n";
+        return datos;
+    }
+    
 }
