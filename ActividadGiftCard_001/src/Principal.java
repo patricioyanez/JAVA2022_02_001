@@ -30,6 +30,20 @@ public class Principal {
         
         System.out.println("Alcanza? g1:" + (g1.validarSaldo(10000)?"si":"no"));
         System.out.println("Alcanza? g2:" + (g2.validarSaldo(5000000)?"Si":"NO"));
+        int saldo = g1.descontar(5000);
+        System.out.println("Saldo actual: " + saldo);
         
+        
+        saldo = g1.descontar(500000);
+        if(saldo >= 0 )
+            System.out.println("Saldo actual: " + saldo);
+        else
+            System.out.println("El saldo no es suficiente");
+        
+        if(g1.validarVigencia())
+            System.out.println("Está vigente");
+        else
+            System.out.println("No está vigente");
+    
     }
 }
