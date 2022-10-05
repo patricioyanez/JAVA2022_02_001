@@ -18,4 +18,10 @@ public class Moto extends Vehiculo{
     {
         System.out.println("La Moto se mueve");
     }
+
+    @Override
+    public boolean encender() {
+        System.out.println("Moto enciende");
+        return true;
+    }
 }

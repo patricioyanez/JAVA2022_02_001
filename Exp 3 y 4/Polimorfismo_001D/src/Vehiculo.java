@@ -1,5 +1,5 @@
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private String marca;
     private String modelo;
     private int cilindrada;
@@ -47,4 +47,5 @@ public class Vehiculo {
         System.out.println("El Vehiculo se mueve");
     }
     
+    public abstract boolean encender();
 }

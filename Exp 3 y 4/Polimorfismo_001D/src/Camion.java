@@ -18,4 +18,10 @@ public class Camion extends Vehiculo{
     {
         System.out.println("El Camión se mueve");
     }
+
+    @Override
+    public boolean encender() {
+        System.out.println("El camión enciende");
+        return true;
+    }
 }

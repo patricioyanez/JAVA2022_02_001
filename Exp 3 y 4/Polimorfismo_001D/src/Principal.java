@@ -17,5 +17,8 @@ public class Principal {
         for (Vehiculo vehiculo : vehiculos) {
             vehiculo.mover();
         }
+        
+        //Vehiculo v1 = new Vehiculo();
+        String a = "";
     }
 }
