@@ -8,5 +8,7 @@ public class Principal {
 
         camion.mover();
         moto.mover();
+        
+        //Vehiculo v = new Vehiculo();
     }
 }
