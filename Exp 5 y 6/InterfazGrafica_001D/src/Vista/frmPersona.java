@@ -35,7 +35,7 @@ public class frmPersona extends javax.swing.JFrame {
         btnGuardar = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro de Persona");
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
