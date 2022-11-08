@@ -1,24 +1,35 @@
 package Modelo;
 
 public class Persona {
+    private int id;
     private String rut;
     private String nombre;
     private String apellido;
     private String direccion;
 
     public Persona() {
+        this.id = 0;
         this.rut = "";
         this.nombre = "";
         this.apellido = "";
         this.direccion = "";
     }
-    public Persona(String rut, String nombre, String apellido, String direccion) {
+    public Persona(int id, String rut, String nombre, String apellido, String direccion) {
+        this.id = id;
         this.rut = rut;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getDireccion() {
         return direccion;
     }
@@ -53,15 +64,13 @@ public class Persona {
     
     public void limpiar()
     {
+        this.id = 0;
         this.rut = "";
         this.nombre = "";
         this.apellido = "";
         this.direccion = "";
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" + "rut=" + rut + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + '}';
-    }
-    
+
+
 }
