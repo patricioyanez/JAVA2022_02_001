@@ -2,6 +2,7 @@
 package Modelo;
 
 public class Automovil {
+    private int id; // nuevo att
     private String patente;
     private double cilindrada;
     private int puertas;
@@ -11,6 +12,7 @@ public class Automovil {
     private boolean tieneEncendidoElectronico;
     
     public Automovil() {
+        this.id = 0;
         this.patente = "";
         this.cilindrada = 0;
         this.puertas = 0;
@@ -19,7 +21,8 @@ public class Automovil {
         this.litrosMaletero = 0;
         this.tieneEncendidoElectronico = false;
     }
-    public Automovil(String patente, double cilindrada, int puertas, String marca, String modelo, double litrosMaletero, boolean tieneEncendidoElectronico) {
+    public Automovil(int id,String patente, double cilindrada, int puertas, String marca, String modelo, double litrosMaletero, boolean tieneEncendidoElectronico) {
+        this.id = id;
         this.patente = patente;
         this.cilindrada = cilindrada;
         this.puertas = puertas;
@@ -29,6 +32,13 @@ public class Automovil {
         this.tieneEncendidoElectronico = tieneEncendidoElectronico;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public boolean isTieneEncendidoElectronico() {
         return tieneEncendidoElectronico;
     }
@@ -92,6 +102,7 @@ public class Automovil {
     
     public void limpiar()
     {
+        this.id = 0;
         this.patente = "";
         this.cilindrada = 0;
         this.puertas = 0;
@@ -100,5 +111,6 @@ public class Automovil {
         this.litrosMaletero = 0;
         this.tieneEncendidoElectronico = false;
     }
+
     
 }
