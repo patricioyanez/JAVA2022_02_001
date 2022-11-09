@@ -1,4 +1,5 @@
 package Vista;
+import Controlador.CPersona;
 import Modelo.Persona;
 import javax.swing.JOptionPane;
 
@@ -172,9 +173,16 @@ public class frmPersona extends javax.swing.JFrame {
             persona.setNombre(txtNombre.getText());
             persona.setApellido(txtApellido.getText());
             persona.setDireccion(txtDireccion.getText());
-            System.out.println(persona);
-            JOptionPane.showMessageDialog(this, "Los datos fueron guardados");
-            btnLimpiar.doClick();
+
+            CPersona controlador = new CPersona();
+            boolean resultado = controlador.agregar(persona);
+            if(resultado)
+            {
+                JOptionPane.showMessageDialog(this, "Los datos fueron guardados");
+                btnLimpiar.doClick();
+            }
+            else
+                JOptionPane.showMessageDialog(this, "Ocurrio un error");
             
             // crear formulario para un automovil con 5 atributos.
         }
