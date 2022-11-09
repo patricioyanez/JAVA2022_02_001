@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class CPersona {
     private Conexion conexion = new Conexion();
-            Connection cnx = conexion.obtenerConexion();
+    
     public boolean agregar(Persona persona)
     {
         try {
@@ -60,4 +60,24 @@ public class CPersona {
         }
         return null;
     }
+    public boolean modificar(Persona persona)
+    {
+        try {
+            Connection cnx = conexion.obtenerConexion();
+            String sql = "UPDATE PERSONA SET nombre = ?, apellido = ?, direccion=? WHERE RUT = ?";
+            PreparedStatement stmt = cnx.prepareStatement(sql);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellido());
+            stmt.setString(3, persona.getDireccion());
+            stmt.setString(4, persona.getRut());
+            stmt.executeUpdate();
+            stmt.close();
+            cnx.close();            
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(CPersona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
 }
