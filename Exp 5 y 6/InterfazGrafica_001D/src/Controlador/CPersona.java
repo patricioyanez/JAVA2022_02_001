@@ -118,8 +118,7 @@ public class CPersona {
                 persona.setApellido(rs.getString("apellido"));
                 persona.setDireccion(rs.getString("direccion"));
                 listado.add(persona);
-            }
-            
+            }            
         } catch (SQLException ex) {
             Logger.getLogger(CPersona.class.getName()).log(Level.SEVERE, null, ex);
         }
