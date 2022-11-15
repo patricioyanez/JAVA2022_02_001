@@ -8,8 +8,8 @@ public class Automovil {
     private int puertas;
     private String marca;
     private String modelo;
-    private double litrosMaletero;
     private boolean tieneEncendidoElectronico;
+    private String tipoCombustible;
     
     public Automovil() {
         this.id = 0;
@@ -18,17 +18,17 @@ public class Automovil {
         this.puertas = 0;
         this.marca = "";
         this.modelo = "";
-        this.litrosMaletero = 0;
+        this.tipoCombustible = "";
         this.tieneEncendidoElectronico = false;
     }
-    public Automovil(int id,String patente, double cilindrada, int puertas, String marca, String modelo, double litrosMaletero, boolean tieneEncendidoElectronico) {
+    public Automovil(int id,String patente, double cilindrada, int puertas, String marca, String modelo, boolean tieneEncendidoElectronico, String tipoCombustible) {
         this.id = id;
         this.patente = patente;
         this.cilindrada = cilindrada;
         this.puertas = puertas;
         this.marca = marca;
         this.modelo = modelo;
-        this.litrosMaletero = litrosMaletero;
+        this.tipoCombustible = tipoCombustible;
         this.tieneEncendidoElectronico = tieneEncendidoElectronico;
     }
 
@@ -87,17 +87,17 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public double getLitrosMaletero() {
-        return litrosMaletero;
+    public String getLitrosMaletero() {
+        return tipoCombustible;
     }
 
-    public void setLitrosMaletero(double litrosMaletero) {
-        this.litrosMaletero = litrosMaletero;
+    public void setLitrosMaletero(String tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
     }
 
 
     public String obtenerDatos() {
-        return "Automovil{" + "patente=" + patente + ", cilindrada=" + cilindrada + ", puertas=" + puertas + ", marca=" + marca + ", modelo=" + modelo + ", litrosMaletero=" + litrosMaletero + ", tieneEncendidoElectronico=" + tieneEncendidoElectronico + '}';
+        return "Automovil{" + "patente=" + patente + ", cilindrada=" + cilindrada + ", puertas=" + puertas + ", marca=" + marca + ", modelo=" + modelo + ", tipo Combustible=" + tipoCombustible + ", tieneEncendidoElectronico=" + tieneEncendidoElectronico + '}';
     }
     
     public void limpiar()
@@ -108,7 +108,7 @@ public class Automovil {
         this.puertas = 0;
         this.marca = "";
         this.modelo = "";
-        this.litrosMaletero = 0;
+        this.tipoCombustible = "";
         this.tieneEncendidoElectronico = false;
     }
 

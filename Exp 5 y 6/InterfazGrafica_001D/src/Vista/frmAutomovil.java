@@ -43,7 +43,7 @@ public class frmAutomovil extends javax.swing.JFrame {
         txtPuertas = new javax.swing.JTextField();
         txtMarca = new javax.swing.JTextField();
         txtModelo = new javax.swing.JTextField();
-        txtLitrosMaletero = new javax.swing.JTextField();
+        txtTipoCombustible = new javax.swing.JTextField();
         chkEsElectronico = new javax.swing.JCheckBox();
         btnLimpiar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
@@ -66,7 +66,7 @@ public class frmAutomovil extends javax.swing.JFrame {
 
         jLabel6.setText("Modelo");
 
-        jLabel7.setText("Maletero");
+        jLabel7.setText("Tipo Combustible");
 
         jLabel8.setText("Es electrónico");
 
@@ -111,23 +111,23 @@ public class frmAutomovil extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8))
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel7))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtPuertas)
-                                    .addComponent(txtMarca)
-                                    .addComponent(txtModelo)
-                                    .addComponent(txtLitrosMaletero)
+                                    .addComponent(txtTipoCombustible)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(chkEsElectronico)
-                                        .addGap(0, 50, Short.MAX_VALUE)))))
-                        .addGap(113, 113, 113))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(txtPuertas, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                                    .addComponent(txtMarca)
+                                    .addComponent(txtModelo))))
+                        .addGap(96, 96, 96))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addComponent(btnLimpiar)
                 .addGap(3, 3, 3)
                 .addComponent(btnGuardar)
@@ -162,18 +162,18 @@ public class frmAutomovil extends javax.swing.JFrame {
                     .addComponent(txtModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtLitrosMaletero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(chkEsElectronico))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtTipoCombustible, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLimpiar)
                     .addComponent(btnGuardar)
                     .addComponent(btnBuscar))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -186,7 +186,7 @@ public class frmAutomovil extends javax.swing.JFrame {
         txtPuertas.setText("");
         txtMarca.setText("");
         txtModelo.setText("");
-        txtLitrosMaletero.setText("");
+        txtTipoCombustible.setText("");
         chkEsElectronico.setSelected(false);
         txtPatente.requestFocus();
     }//GEN-LAST:event_btnLimpiarActionPerformed
@@ -208,8 +208,7 @@ public class frmAutomovil extends javax.swing.JFrame {
         auto.setMarca(txtMarca.getText());
         auto.setModelo(txtModelo.getText());
         
-        numero = Double.parseDouble(txtLitrosMaletero.getText());
-        auto.setLitrosMaletero(numero);
+        auto.setLitrosMaletero(txtTipoCombustible.getText());
         
         auto.setTieneEncendidoElectronico(chkEsElectronico.isSelected());
         
@@ -266,10 +265,10 @@ public class frmAutomovil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField txtCilindrada;
-    private javax.swing.JTextField txtLitrosMaletero;
     private javax.swing.JTextField txtMarca;
     private javax.swing.JTextField txtModelo;
     private javax.swing.JTextField txtPatente;
     private javax.swing.JTextField txtPuertas;
+    private javax.swing.JTextField txtTipoCombustible;
     // End of variables declaration//GEN-END:variables
 }
