@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -97,4 +98,32 @@ public class CPersona {
         }
         return false;
     } 
+
+
+    public ArrayList<Persona> buscarTodos()
+    {
+        ArrayList<Persona> listado = new ArrayList<Persona>();
+        try {
+            Connection cnx = conexion.obtenerConexion();
+            String sql = "SELECT * FROM PERSONA";
+            PreparedStatement stmt = cnx.prepareStatement(sql);
+            // stmt.setString(1, rut); // aplicar si es que se requiere filtrar
+            ResultSet rs = stmt.executeQuery();
+            
+            while(rs.next())
+            {
+                Persona persona = new Persona();
+                persona.setRut(rs.getString("rut"));
+                persona.setNombre(rs.getString("nombre"));
+                persona.setApellido(rs.getString("apellido"));
+                persona.setDireccion(rs.getString("direccion"));
+                listado.add(persona);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(CPersona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listado;
+    }
+    
 }
